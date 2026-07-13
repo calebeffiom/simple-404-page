@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
-    url: 'https://vocal-clone.vercel.app/',
+    url: 'https://nostalgic-404-page.vercel.app/',
     siteName: title,
     images: [
       {
