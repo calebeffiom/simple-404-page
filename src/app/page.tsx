@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <section className="h-screen w-screen relative overflow-hidden">
       <audio ref={audioRef} src="/audio/farewell.mp3" loop />
-      <div className="absolute w-full mx-auto aspect-video overflow-hidden">
+      <div className="absolute h-full w-full mx-auto aspect-video overflow-hidden">
         <img
           src="https://i.ibb.co/LGNTN6W/image-2.jpg"
           alt="Van parked under a starry night sky"
@@ -66,22 +66,38 @@ export default function Home() {
         pointerEvents: 'none',
       }} />
 
-      <div className="absolute bottom-[-30] h-[360px] right-0 rotate-[5deg]">
+
+      <div style={{
+        position: 'absolute',
+        top: '40%',
+        left: '50%',
+        width: '100px',
+        height: '0.5px',
+        borderRadius: '100px',
+        background: 'linear-gradient(to right, transparent 0%, rgba(200,220,255,0.1) 25%, rgba(230, 242, 255, 0.6) 75%, #ffffffab 100%)',
+        boxShadow: '0 0 8px 1px rgba(200,225,255,0.55), 0 0 22px 5px rgba(180,210,255,0.2)',
+        animation: 'shooting-star 8s ease-out infinite',
+        animationDuration: '4s',
+        zIndex: 40,
+        pointerEvents: 'none',
+      }} />
+
+      <div className="absolute bottom-[-30] h-[280px] xl:h-[360px] -right-10 lg:right-0 rotate-[5deg]">
 
         <div className="relative w-full h-full">
           <h1
-            className="absolute left-[38%] top-[10%] font-display text-[50px] text-extrabold text-[#fff]/40 font-display"
+            className="absolute left-[40%] lg:left-[38%] top-[13%] lg:top-[10%] font-display text-4xl lg:text-[50px] text-extrabold text-[#fff]/40 font-display"
           >
             404
           </h1>
-          <p className="absolute left-[28%] top-[38%] font-display text-[#fff]/40 text-md">Oops! I think you're lost!</p>
-          <p className="absolute left-[22%] top-[60%] font-display text-[#fff]/40 text-md">Well... just enjoy the view then :)</p>
+          <p className="absolute left-[28%] top-[38%] font-display text-[#fff]/40 text-sm lg:text-md">Oops! I think you're lost!</p>
+          <p className="absolute left-[24%] top-[62%] lg:left-[22%] lg:top-[60%] font-display text-[#fff]/40 text-xs lg:text-md">Well... just enjoy the view then {":)"}</p>
           <img src="/image/sig3.png" alt="" className="w-full h-full object-cover object-bottom" />
         </div>
       </div>
       <button
         onClick={toggleAudio}
-        className="absolute bottom-8 left-8 z-50 flex items-center justify-center rounded-full  p-4 text-white/60 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-white hover:scale-110"
+        className="absolute sm:bottom-8 left-8 z-50 flex items-center justify-center rounded-full  p-4 text-white/60 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-white hover:scale-110"
         aria-label={isPlaying ? "Pause background music" : "Play background music"}
       >
         {isPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
