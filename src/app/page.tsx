@@ -82,16 +82,16 @@ export default function Home() {
         pointerEvents: 'none',
       }} />
 
-      <div className="absolute bottom-[-30] h-[280px] xl:h-[360px] -right-10 lg:right-0 rotate-[5deg]">
+      <div className="absolute bottom-[-30] h-[280px] xl:h-[360px] lg:right-0 -right-10 rotate-[5deg]">
 
         <div className="relative w-full h-full">
           <h1
-            className="absolute left-[40%] lg:left-[38%] top-[13%] lg:top-[10%] font-display text-4xl lg:text-[50px] text-extrabold text-[#fff]/40 font-display"
+            className="absolute left-[40%] lg:left-[38%] top-[13%] lg:top-[10%] xl:top-[13%] xl:left-[41%] font-display text-4xl lg:text-[50px] text-extrabold text-[#fff]/40 font-display"
           >
             404
           </h1>
-          <p className="absolute left-[28%] top-[38%] font-display text-[#fff]/40 text-sm lg:text-md">Oops! I think you're lost!</p>
-          <p className="absolute left-[24%] top-[62%] lg:left-[22%] lg:top-[60%] font-display text-[#fff]/40 text-xs lg:text-md">Well... just enjoy the view then {":)"}</p>
+          <p className="absolute left-[28%] top-[38%] lg:left-[28%] lg:top-[38%] font-display text-[#fff]/40 xl:text-lg text-sm">Oops! I think you're lost!</p>
+          <p className="absolute left-[24%] top-[62%] lg:left-[24%] lg:top-[62%] font-display text-[#fff]/40 text-xs xl:text-[15px]">Well... just enjoy the view then {":)"}</p>
           <img src="/image/sig3.png" alt="" className="w-full h-full object-cover object-bottom" />
         </div>
       </div>
